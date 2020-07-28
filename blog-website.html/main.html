@@ -6,33 +6,42 @@
         <meta description= "This website is about life in Toronto including latest news, blog posts, events and best things in the city."/>
         <link rel="stylesheet" href="../website-style/primary.css"/>
     </head>
-    <body>
-        <div>
-        <header class="page-header">
-            <h1>Our City Toronto</h1>
-        </header>
-        <main>
+    <body class="container">
+        <div class="header-box">
+            <header class="page-header"><h1>Our City Toronto</h1>
+            </header>
+        </div>
+        <div class="sidebar-box">
+            <nav class="sidebar-nav">
+                <ul>
+                  <li><a class="sidebar-links" href="blogpost.html">Posts</a></li>
+                  <li><a class="sidebar-links" href="https://www.blogto.com/videos/cn-tower-open-toronto/">Videos</a></li>
+                  <li><a class="sidebar-links" href="https://www.blogto.com/news/">Latest news</a></li>
+                </ul>
+            </nav>
+        </div>           
+        <main class="content-box">
             <div class="page-body">
                 <div class="page-body-top">
                     <!-- <div style="width: 100%; overflow: hidden;">
                         <div style="width: 600px; float: left;"> Left </div>
                         <div style="margin-left: 620px;"> Right </div>
                     </div> -->
-                    <div class="sidebar">
-                        <nav>
-                            <ul>
-                              <li><a class="sidebar-links-color" href="blogpost.html">Posts</a></li>
-                              <li><a class="sidebar-links-color" href="https://www.blogto.com/videos/cn-tower-open-toronto/">Videos</a></li>
-                              <li><a class="sidebar-links-color" href="https://www.blogto.com/news/">Latest news</a></li>
-                            </ul>
-                        </nav>
-                    </div>
                     <div class="latest-post">
-                        <img src="images/Toronto-view.jpeg" alt="A panorama of Toronto"/>
-                        <button class="read-more-button"><a class="button-read-more-text" href="blogpost.html">Read more</a></button>
+                        <a href="blogpost.html">
+                            <img src="images/Toronto-view.jpeg" alt="A panorama of Toronto"/>
+                        </a>
+                        <button class="latest-post-button"><a class="button-latest-post-text" href="blogpost.html">Latest post</a></button>
                     </div>
                 </div>
-                <!-- <div class="page-body-middle"></div> -->
+                <!-- <div class="page-body-middle">
+                    <div class="trending-box">
+                        <a href="https://www.blogto.com/news/"><h2>Trending posts this week</h2></a>
+                        <img src="images/WFH.jpg" alt="A woman working from home"/>
+                    </div>
+                    <div class="trending-box">Trending videos this week</div>
+                    <div class="trending-box">City News</div>
+                </div> -->
                 <div class="page-body-bottom">
                     <form action="" method="get" class="form-subscribe">
                         <div>
@@ -50,7 +59,7 @@
                 </div>
             </div>
         </main>
-        <footer class="footer-background">
+        <footer class="footer-box">
             <nav class="footer-nav">
                 <div class="footer-links">
                         <a href="https://www.blogto.com/contact/">Contact Us</a>
