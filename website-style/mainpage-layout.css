@@ -1,29 +1,22 @@
-.box { 
-width: auto;
-/* margin: 25px;
-padding: 50px; */
-font: 100%/1.6 Arial, Courier, Times;
-font-family: Arial, "Courier New", "Times New Roman";
-/* font-size: 16px; */
+/* Mobile screen */
+.container {
+  font-family: Arial, "Times New Roman", "Courier New";
+  display: grid;
+  justify-content: center;
+  height: 100vh;
+  grid-template-rows: 100px 100px 400px;
+  grid-template-columns: 400px;
+  grid-template-areas:
+  "hd"
+  "sd"
+  "main"
+  "ft" 
 }
 
-.container {
-  display: grid;
-  width: 100%;
-  margin: auto;
-  grid-gap: 50px;
-  justify-content: center;
-  /* align-items: center; */
-  grid-template-rows: 100px 500px 100px;
-  grid-template-columns: 50px 300px;
-  grid-template-areas:
-  "hd hd hd hd hd hd hd hd"
-  "sd sd main main main main main main"
-  "ft ft ft ft ft ft ft ft"
-}
 
 .header-box {
   grid-area: hd;
+  z-index: 1;
 }
 
 .sidebar-box {
@@ -32,11 +25,47 @@ grid-area: sd;
 
 .content-box {
   grid-area: main;
-}
+  /* background-image: url(images/Toronto-view.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat; */
+} 
 
 .footer-box {
   grid-area: ft;
 } 
+
+/* Medium screen */
+@media (min-width: 600px) and (max-width: 1100px) {
+  .container { 
+    font-family: "Times New Roman", Arial, "Courier New";
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    grid-gap: 40px;
+    grid-template-rows: 100px 400px 100px;
+    grid-template-columns: 100px 200px;
+    grid-template-areas:
+    "hd hd hd hd hd hd hd hd"
+    "sd main main main main main main main"
+    "ft ft ft ft ft ft ft ft"
+  }
+}
+
+/* Large screen */
+@media (min-width: 1101px) {
+  .container { 
+    font-family: "Times New Roman", Arial, "Courier New";
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 100px 400px 100px;
+    grid-template-columns: 50px 100px;
+    grid-gap: 40px;
+    grid-template-areas:
+    "hd hd hd hd hd hd hd hd"
+    "sd sd main main main main main main"
+    "ft ft ft ft ft ft ft ft" 
+  }
+}
 
 .page-header {
   background-color: rgb(200, 232, 245);
@@ -44,20 +73,21 @@ grid-area: sd;
   border-radius: 20px;
   /* display: inline-block; */
   padding: 5px;
-  position: fixed;
+  position: absolute;
   border: 10px solid #757574;
   font-size: 12px;
+  margin-top: 20px;
   /* font: 100%/1.6 Arial, Courier, Times; */
 }
 
 .page-body {
-  /* padding-top: 155px; */
+  margin-top: 20px;
   /* background-color: rgb(219, 216, 216); */
 }
 
 .page-body-top {
   /* padding-top: 20px; */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* .sidebar a {
@@ -80,11 +110,8 @@ color: rgb(121, 117, 117);
   padding-top: 10px;
   text-align: center;
   background-color: rgb(222, 227, 228);
-}
-
-/* .sidebar {
-  float: left;
-  width: 10%; */
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 ul {
@@ -95,7 +122,7 @@ ul {
   /* float: right;
   width: 90%; */
   text-align: center;
-  position: relative;
+  /* position: relative; */
 }
 
 /* .latest-post-text {
@@ -147,10 +174,10 @@ color: rgb(121, 117, 117);
 .footer-nav {
   display: inline;
   padding: 20px;
-}
+  width: 100%;
+  }
 
 .footer-links {
-  /* padding-left: 100px;  */
 }
 
 .social {
@@ -161,7 +188,7 @@ color: rgb(121, 117, 117);
 
 .footer-social-link {
   margin-left: 3px;
-  /* display: inline-block; */
+  /* display: inline-block;
   /* height: 100%;  */
 }
 
@@ -173,8 +200,8 @@ color: rgb(121, 117, 117);
 .footer-links a {
   /* display: inline; */
   font-size: 18px;
-  font-weight:bold;
-  margin-right:1.5em;
+  font-weight: bold;
+  margin-right: 1.5em;
   color: rgb(121, 117, 117);
 }
 
