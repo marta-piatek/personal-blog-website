@@ -1,10 +1,11 @@
 /* Mobile screen */
 .container {
   font-family: Arial, "Times New Roman", "Courier New";
+  background-color: rgb(240, 240, 228);
   display: grid;
   justify-content: center;
   height: 100vh;
-  grid-template-rows: 100px 100px 400px;
+  grid-template-rows: 100px 100px 450px;
   grid-template-columns: 400px;
   grid-template-areas:
   "hd"
@@ -13,28 +14,28 @@
   "ft" 
 }
 
-
 .header-box {
   grid-area: hd;
   z-index: 1;
 }
 
 .sidebar-box {
-grid-area: sd;
+  grid-area: sd;
 }
 
 .content-box {
   grid-area: main;
-  /* background-image: url(images/Toronto-view.jpeg);
-  background-size: contain;
-  background-repeat: no-repeat; */
 } 
 
 .footer-box {
   grid-area: ft;
+  margin-top: 20px;
+  margin-right: 20px;
+  /* display: flex;
+  flex-direction: column; */
 } 
 
-/* Medium screen */
+/* Tablet screen */
 @media (min-width: 600px) and (max-width: 1100px) {
   .container { 
     font-family: "Times New Roman", Arial, "Courier New";
@@ -42,7 +43,7 @@ grid-area: sd;
     width: 100%;
     justify-content: center;
     grid-gap: 40px;
-    grid-template-rows: 100px 400px 100px;
+    grid-template-rows: 100px 450px 150px;
     grid-template-columns: 100px 200px;
     grid-template-areas:
     "hd hd hd hd hd hd hd hd"
@@ -51,13 +52,13 @@ grid-area: sd;
   }
 }
 
-/* Large screen */
+/* Desktop screen */
 @media (min-width: 1101px) {
   .container { 
     font-family: "Times New Roman", Arial, "Courier New";
     display: grid;
     justify-content: center;
-    grid-template-rows: 100px 400px 100px;
+    grid-template-rows: 100px 450px 200px;
     grid-template-columns: 50px 100px;
     grid-gap: 40px;
     grid-template-areas:
@@ -71,40 +72,22 @@ grid-area: sd;
   background-color: rgb(200, 232, 245);
   color: rgb(121, 117, 117);
   border-radius: 20px;
-  /* display: inline-block; */
   padding: 5px;
   position: absolute;
   border: 10px solid #757574;
   font-size: 12px;
   margin-top: 20px;
-  /* font: 100%/1.6 Arial, Courier, Times; */
 }
 
 .page-body {
   margin-top: 20px;
-  /* background-color: rgb(219, 216, 216); */
 }
 
-.page-body-top {
-  /* padding-top: 20px; */
-  /* overflow: hidden; */
-}
-
-/* .sidebar a {
+.sidebar-nav {
   font-size: 18px;
   font-weight: bold;
   color: rgb(121, 117, 117);
-} */
-
-.sidebar-nav {
-font-size: 18px;
-font-weight: bold;
-color: rgb(121, 117, 117);
 }
-
-/* .page-body-middle {
-  padding-top: 10px;
-} */
 
 .page-body-bottom {
   padding-top: 10px;
@@ -118,26 +101,13 @@ ul {
   color: rgb(121, 117, 117);
 }
 
-.latest-post {
-  /* float: right;
-  width: 90%; */
-  text-align: center;
-  /* position: relative; */
-}
-
-/* .latest-post-text {
-  position: absolute;
-  top: 8px;
-  left: 340px;
-} */
-
 .latest-post-button {
   display: block; 
   width: fixed; 
   height: 25px;
   margin: 0 auto;
   background-color: rgb(144, 187, 201);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .button-latest-post-text {
@@ -145,8 +115,11 @@ ul {
   font-weight: bold;
 }
 
+
+
 .form-subscribe-button {
   font-weight: bold;
+  height: 25px;
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: rgb(144, 187, 201);
@@ -154,54 +127,25 @@ ul {
 }
 
 .form-subscribe-text {
-color: rgb(121, 117, 117); 
+  color: rgb(121, 117, 117); 
 }
 
-/* .page-body-middle {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  margin-top: 20px;
-} */
-
-/* .trending-box {
-  border: black solid;
-  height: 150px;
-  width: 300px;
-} */
-
 .footer-nav {
-  display: inline;
-  padding: 20px;
+  margin-top: 20px;
   width: 100%;
-  }
-
-.footer-links {
 }
 
 .social {
   float: right;
-  /* padding-right: 100px; */
-  margin-top: -30px;
 }
 
 .footer-social-link {
   margin-left: 3px;
-  /* display: inline-block;
-  /* height: 100%;  */
-}
-
-.footer-social-icon {
-  width: 36px;
-  height: 36px;
 }
 
 .footer-links a {
-  /* display: inline; */
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
-  margin-right: 1.5em;
   color: rgb(121, 117, 117);
 }
 

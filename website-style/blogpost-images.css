@@ -1,0 +1,71 @@
+.lavender-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile screen */
+.nested-grid {
+    display: grid;
+    height: 200vh;
+    grid-row-gap: 20px;
+    grid-template-columns: 100%;
+}
+    
+/* Tablet Screen */
+@media (min-width: 600px) and (max-width: 1300px) {
+    .nested-grid {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        grid-row-gap: 20px;
+        grid-column-gap: 5%;
+        height: 100vh;
+    }
+}
+
+/* Desktop screen */
+@media (min-width: 1301px) {
+    .nested-grid {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-column-gap: 10px;
+        height: 40vh;
+    }
+}
+
+.post-box,
+.image-1,
+.image-2,
+.image-3,
+.image-4  {
+    width: 400px;  
+    height: 250px;
+}
+
+/* .author-image-container {
+    min-width: 100px;
+    display: block;
+    margin: 10px;
+} */
+
+.Marta-photo {
+    max-width: 10%;
+    max-height: 10%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid rgb(121, 117, 117);
+    display: block;
+}
+
+.footer-social-icon {
+    width: 36px;
+    height: 36px;
+    margin-top: 40px;
+}
